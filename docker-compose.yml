@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  test-debug:
+    build: .
+    volumes:
+      - ".:/src"
+    ports:
+      - "7000:7000"
+      - "9000:9000"
+    security_opt:
+      - "seccomp:unconfined"
